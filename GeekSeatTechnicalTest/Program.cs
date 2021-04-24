@@ -40,6 +40,13 @@ namespace GeekSeatTechnicalTest
 
             int peoplekilledonA = report.GetPeopleKilledOnYearBorn(witch, personAyob);
             int peoplekilledonB = report.GetPeopleKilledOnYearBorn(witch, personByob);
+            if (peoplekilledonA < 0 || peoplekilledonB < 0)
+            {
+                Console.WriteLine("-1");
+                Console.Write("Press enter to exit");
+                Console.ReadLine();
+                return;
+            }
 
             List<decimal> peopleKilled = new List<decimal>();
             Victims victim = new Victims();
@@ -50,7 +57,7 @@ namespace GeekSeatTechnicalTest
             Console.WriteLine("Person A born on year: " + PersonA.YearOfDeath + "-" + PersonA.Age +" = "+ personAyob + ", number people killed on year " + personAyob + " is " + peoplekilledonA);
             Console.WriteLine("Person B born on year: " + PersonB.YearOfDeath + "-" + PersonB.Age + " = " + personByob + ", number people killed on year " + personByob + " is " + peoplekilledonB);
             Console.WriteLine("So the average is (" + peoplekilledonB + " + " + peoplekilledonA + ") / " + peopleKilled.Count + " = " + averagePeopleGetKilled);
-            Console.Write("Please enter any key to exit");
+            Console.Write("Press enter to exit");
             Console.ReadLine();
         }
     }
