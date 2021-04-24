@@ -20,7 +20,7 @@ namespace GeekSeatTechnicalTest
             int personB_yod = Convert.ToInt32(Console.ReadLine());
             Console.Write("Please input how long the witch take control in years: ");
             int yearofwitch = Convert.ToInt32(Console.ReadLine());
-
+            //
 
             VillagerReport report = new VillagerReport();
             Witch witch = new Witch();
